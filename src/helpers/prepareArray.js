@@ -1,23 +1,26 @@
- // {
- //            src: "https://c4.staticflickr.com/8/7476/28973628875_069e938525_b.jpg",
- //            thumbnail: "https://c4.staticflickr.com/8/7476/28973628875_069e938525_n.jpg",
- //            thumbnailWidth: 320,
- //            thumbnailHeight: 213,
- //            caption: "Time to Think (Tom Eversley - isorepublic.com)"
- //        }
-
-export default function prepareArray(array) {
+export default function prepareArray(array, title) {
 	const prepatedArray = [];
-	cons item = {};
-	array.map((src)=>{
-		
-        item = {
+	const resize = '/resize=height:200/';
+	let item = {};
+	let srcParams = [];
+	let thumbnail = '';
+	let tumbImagesize = {};
+	array.map((src, i)=>{
+        srcParams = src.split('/');
+        thumbnail = srcParams[0] + '//' + srcParams[2] + resize + srcParams[3];
+	    item = {
         	src,
-
+            thumbnail,
+            thumbnailHeight: 200,
+            thumbnailWidth: 300,
+            caption: title + ' N' + (i + 1),
+            percent: 0
         }
-		console.log(src);
+        prepatedArray.push(item)
 	})
-	
-	
+
+	if(!localStorage.getItem('images')) {
+		localStorage.setItem('images', JSON.stringify(prepatedArray));
+	}
 	return prepatedArray;	
 }

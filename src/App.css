@@ -22,6 +22,178 @@
   color: #61dafb;
 }
 
+.modal-content .item {
+  display: inline-flex;
+  margin-bottom: 20px;
+}
+
+.text-center{
+  text-align: center!important;
+  margin: 15px 0;
+}
+
+.controller-container{
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.controller-container .parts{
+  width: 50%;
+  float: left;
+}
+
+.select_all {
+  height: 36px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.selected_images {
+  padding: 2px;
+  color: #666;
+}
+
+.gallery_wrapper {
+  display: block;
+  minHeight: 1px;
+  width: 100%;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.modal-content .item .item-image {
+  display: flex;
+  width: 10%;
+  height: 70px;
+}
+
+.modal-content .item .item-image img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.modal-content .item-load {
+  display: flex;
+  width: 90%;
+  margin: 0 20px 0 10px;
+}
+
+.modal-content .item-load .react-sweet-progress-line{
+  margin: 0 25px;
+}
+
+.modal-content .delete-btn {
+  display: flex;
+  width: 10%;    
+  align-items: center;
+}
+
+.modal-content .delete-btn .delete {
+  display: flex;
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-container{
+  text-align: right;
+}
+
+.btn {
+  z-index: 9;
+  display: inline-block;
+  height: 50px;
+  width: 140px;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.btn.sure:after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  background: #3bade3;
+  background: linear-gradient(45deg, #353537 0%, #7B7B7D 25%, #6DB432 51%, #8BC064 100%);
+  height: 50px;
+  width: 372px;
+  z-index: -1;
+  -webkit-transform: translateX(-280px);
+          transform: translateX(-280px);
+  transition: -webkit-transform 400ms ease-in;
+  transition: transform 400ms ease-in;
+  transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+}
+
+.btn.nope:after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  background: #3bade3;
+  background: linear-gradient(45deg, #353537 0%, #666 25%, #4782b2 51%, #007ee3 100%);
+  height: 50px;
+  width: 372px;
+  z-index: -1;
+  -webkit-transform: translateX(-280px);
+          transform: translateX(-280px);
+  transition: -webkit-transform 400ms ease-in;
+  transition: transform 400ms ease-in;
+  transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
+.btn span {
+  position: relative;
+  top: 16px;
+}
+
+.modal-main{
+
+}
+
+.modal-content{
+  max-height: 600px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+
+.modal-content::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.modal-content::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.modal-content::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #D62929;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -25,6 +25,7 @@
 .modal-content .item {
   display: inline-flex;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .text-center{
@@ -64,7 +65,7 @@
 
 .modal-content .item .item-image {
   display: flex;
-  width: 10%;
+  width: 85px;
   height: 70px;
 }
 
@@ -163,7 +164,12 @@
 }
 
 .modal-main{
+   min-width: 50%;
+}
 
+.modal-main h2{
+  border-bottom: 2px solid #000;
+  padding-bottom: 15px
 }
 
 .modal-content{

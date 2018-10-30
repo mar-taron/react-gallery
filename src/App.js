@@ -197,7 +197,7 @@ export default class App extends React.Component {
                                 image.isSelected ?                              
                                     <div className="item" key={key}>
                                         <div className="item-image">
-                                            <img src={image.src}/>
+                                            <img src={image.thumbnailSmall}/>
                                         </div>
                                         <div className="item-load">
                                             <Progress percent={percent == 100 ? percent : image.percent} status="error" />

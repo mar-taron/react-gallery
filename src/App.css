@@ -88,7 +88,7 @@
 
 .modal-content .delete-btn {
   display: flex;
-  width: 10%;    
+  width: 10%;
   align-items: center;
 }
 
@@ -186,7 +186,6 @@
   font-size: 20px;
   margin-right: 10px;
 }
-
 
 @keyframes App-logo-spin {
   from {

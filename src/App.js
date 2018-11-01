@@ -15,7 +15,7 @@ import './App.css';
 
 export default class App extends React.Component {
     constructor(props){
-        super(props);      
+        super(props);
         const storageImages = JSON.parse(localStorage.getItem('images'));
         this.state = {
             images: storageImages.length ? storageImages : [],
@@ -26,15 +26,15 @@ export default class App extends React.Component {
 
         this.onSelectImage = this.onSelectImage.bind(this);
         this.getSelectedImages = this.getSelectedImages.bind(this);
-        this.onClickSelectAll = this.onClickSelectAll.bind(this);        
-        this.onRemoveImages = this.onRemoveImages.bind(this);        
+        this.onClickSelectAll = this.onClickSelectAll.bind(this);
+        this.onRemoveImages = this.onRemoveImages.bind(this);
     }
 
     getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    onEntered = () => {        
+    onEntered = () => {
         setTimeout(() => {
             let image = {};
             let images = [];
@@ -73,7 +73,7 @@ export default class App extends React.Component {
         } else {
             NotificationManager.warning('', 'You have to select at least 1 image.', 3000);
         }
-      
+
     };
 
     onCloseModal = () => {
@@ -159,7 +159,7 @@ export default class App extends React.Component {
             if(this.state.images[i].isSelected == true) {
                removeImages.push(i);
             } else {
-               leftImages.push(this.state.images[i]); 
+               leftImages.push(this.state.images[i]);
             }
         }
 
@@ -167,10 +167,10 @@ export default class App extends React.Component {
             images: leftImages
         }, () => {
             localStorage.setItem('images', JSON.stringify(leftImages));
-            this.onCloseModal();  
+            this.onCloseModal();
             NotificationManager.success('', 'Images: ' + removeImages.toString() + ' have been deleted.');
         })
-        
+
     }
 
     onResetImages = () => {
@@ -193,25 +193,25 @@ export default class App extends React.Component {
                     <Modal open={open} onClose={this.onCloseModal} onEntered={this.onEntered} classNames={{'modal': 'modal-main'}} center>
                       <h2>Delete selected images?</h2>
                       <div className="modal-content">
-                            {images.map((image, key) => 
-                                image.isSelected ?                              
+                            {images.map((image, key) =>
+                                image.isSelected ?
                                     <div className="item" key={key}>
                                         <div className="item-image">
                                             <img src={image.thumbnailSmall}/>
                                         </div>
                                         <div className="item-load">
                                             <Progress percent={percent == 100 ? percent : image.percent} status="error" />
-                                        </div>       
+                                        </div>
                                     </div>
                                 :null
                             )}
-                      </div>  
+                      </div>
                       <div className="modal-footer">
                             <div className="button-container">
                               <a href="#" onClick={this.onRemoveImages} className="btn blue-btn"><span><i className="far fa-check-circle custom-icon"></i>Sure</span></a>
                               <a href="#" onClick={this.onCloseModal} className="btn white-btn"><span><i className="fas fa-ban custom-icon"></i>Nope</span></a>
                             </div>
-                      </div>  
+                      </div>
                     </Modal>
 
                     <div className="controller-container">
@@ -230,7 +230,7 @@ export default class App extends React.Component {
                           <a href="#" onClick={this.onOpenModal} className="btn blue-btn"><span><i className="fas fa-trash-alt custom-icon"></i>Delete Images</span></a>
                         </div>
                     </div>
-                    
+
 
                     <div className="selected_images">Selected Images: {this.getSelectedImages().toString()}</div>
                     <div className="gallery_wrapper">
@@ -241,7 +241,7 @@ export default class App extends React.Component {
                     </div>
                     <NotificationContainer/>
                 </div>
-                : 
+                :
                 <div>
                     <div className="button-container text-center">
                         <a href="#" onClick={this.onResetImages} className="btn blue-btn"><span><i className="fas fa-redo-alt custom-icon"></i>Reset Images</span></a>

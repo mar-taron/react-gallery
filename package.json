@@ -4,10 +4,14 @@
   "private": true,
   "dependencies": {
     "prop-types": "^15.5.8",
+    "rc-progress": "^2.2.6",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-images": "^0.5.16",
+    "react-notifications": "^1.4.3",
+    "react-responsive-modal": "^3.4.0",
     "react-scripts": "2.0.5",
+    "react-sweet-progress": "^1.1.2",
     "shuffle-array": "^1.0.1"
   },
   "devDependencies": {

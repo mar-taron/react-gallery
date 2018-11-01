@@ -22,6 +22,172 @@
   color: #61dafb;
 }
 
+.modal-content .item {
+  display: inline-flex;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.text-center{
+  text-align: center!important;
+  margin: 15px 0;
+}
+
+.controller-container{
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.controller-container .parts{
+  width: 50%;
+  float: left;
+}
+
+.select_all {
+  height: 36px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.selected_images {
+  padding: 2px;
+  color: #666;
+}
+
+.gallery_wrapper {
+  display: block;
+  minHeight: 1px;
+  width: 100%;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.modal-content .item .item-image {
+  display: flex;
+  width: 85px;
+  height: 70px;
+}
+
+.modal-content .item .item-image img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.modal-content .item-load {
+  display: flex;
+  width: 90%;
+  margin: 0 20px 0 10px;
+}
+
+.modal-content .item-load .react-sweet-progress-line{
+  margin: 0 25px;
+}
+
+.modal-content .delete-btn {
+  display: flex;
+  width: 10%;    
+  align-items: center;
+}
+
+.modal-content .delete-btn .delete {
+  display: flex;
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-container{
+  text-align: right;
+}
+
+.btn {
+  display: inline-block;
+  z-index: 9;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  width: 300px;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 12px 0;
+}
+
+.blue-btn{
+  background: #0084ff;
+  color: white;
+}
+
+.white-btn {
+  border: 1px solid #0084ff;
+  background: transparent;
+  color: #0084ff;
+}
+
+.white-btn:active, .white-btn:focus {
+  border: 1px solid #0073e0;
+  color: #0073e0;
+}
+
+.blue-btn:active, .blue-btn:focus {
+  background: #0073e0;
+  color: #e0e0e0;
+}
+
+.btn span {
+  position: relative;
+  font-weight: 600;
+}
+
+.modal-main{
+   min-width: 50%;
+}
+
+.modal-main h2{
+  border-bottom: 2px solid #000;
+  padding-bottom: 15px
+}
+
+.modal-content{
+  max-height: 600px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+
+.modal-content::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.modal-content::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.modal-content::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #D62929;
+}
+
+.custom-icon{
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
